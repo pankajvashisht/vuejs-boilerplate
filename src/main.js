@@ -1,8 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
-
+import Vue from 'vue';
+import App from './App.vue';
+import router from './routes';
+import nivedan from './utils/nivedanConfig';
+Vue.config.productionTip = false;
+Vue.prototype.nivedan = nivedan;
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+	router,
+	render: (h) => h(App),
+}).$mount('#app');
